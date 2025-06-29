@@ -75,16 +75,22 @@ Check the `sample_data/` folder for ready-to-test `.csv` files.
 src/
 ├── main/
 │   ├── kotlin/
-│   │   └── com/example/euroconnecttelecoms/
-│   │       ├── controller/
-│   │       ├── model/
-│   │       ├── util/
-│   │       └── Main.kt
+│   │   └── com.example.euroconnecttelecoms/
+│   │       ├── CsvLoader.kt
+│   │       ├── Edge.kt
+│   │       ├── KotlinMST.kt
+│   │       ├── KotlinMST_Functional.kt
+│   │       ├── KruskalMST.kt
+│   │       ├── MainApplication.kt
+│   │       └── MainController.kt
+│   ├── resources/
+│   │   └── com.example.euroconnecttelecoms/
+│   │       └── main-view.fxml
 │   ├── scala/
-│   │   └── com/example/euroconnecttelecoms/ScalaMST/
-│   │       ├── ScalaMSTOO.scala
-│   │       └── ScalaMSTFunctional.scala
-│   └── resources/
-│       └── main-view.fxml
+│   │   └── com.example.euroconnecttelecoms.ScalaMST/
+│   │       ├── EdgeScala.scala
+│   │       ├── ScalaMST.scala
+│   │       ├── ScalaMSTFunctional.scala
+│   │       └── ScalaMSTOO.scala
 ```
 ---
