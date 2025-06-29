@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.euroconnecttelecoms.MainController"
+            style="-fx-font-size: 16px; -fx-font-family: 'Segoe UI';">
+
+    <!-- Top Section: Controls -->
+    <top>
+        <VBox spacing="12">
+            <padding>
+                <Insets top="15.0" right="15.0" bottom="10.0" left="15.0"/>
+            </padding>
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <Button fx:id="loadFileButton" text="📂 Load File" onAction="#onLoadFile"/>
+                <Label text="Language:"/>
+                <ChoiceBox fx:id="languageChoiceBox" prefWidth="120"/>
+                <Label text="Paradigm:"/>
+                <ChoiceBox fx:id="paradigmChoiceBox" prefWidth="160"/>
+                <Button fx:id="runMstButton" text="🚀 Run MST" onAction="#onRunMST"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Center Section: Graph Area -->
+    <center>
+        <Pane fx:id="graphPane" prefWidth="1000.0" prefHeight="600.0"
+              style="-fx-background-color: #f4f4f4; -fx-border-color: #cccccc; -fx-border-width: 1px;"/>
+    </center>
+
+    <!-- Right Section: Edge List View -->
+    <right>
+        <VBox spacing="12">
+            <padding>
+                <Insets top="15.0" right="15.0" bottom="15.0" left="10.0"/>
+            </padding>
+            <Label text="Edge List" style="-fx-font-weight: bold;"/>
+            <ListView fx:id="edgeListView" prefWidth="300.0" prefHeight="600.0"/>
+        </VBox>
+    </right>
+
+    <!-- Bottom Section: Status -->
+    <bottom>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="10.0" right="15.0" bottom="10.0" left="15.0"/>
+            </padding>
+            <Label fx:id="statusLabel" text="Status: Waiting for file..."
+                   style="-fx-text-fill: #444; -fx-font-style: italic;"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>
